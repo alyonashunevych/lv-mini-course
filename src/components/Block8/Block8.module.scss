@@ -1,0 +1,76 @@
+@use './../../styles/global' as *;
+@use './../../styles/mixins' as *;
+
+.block8 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-burgundy);
+  width: 100%;
+  padding: 70px 40px;
+
+  @include on-tablet {
+    padding: 40px 40px;
+  }
+
+  @include on-mobile {
+    margin-top: 60px;
+  }
+
+  button {
+    border: none;
+    width: 280px;
+    height: 70px;
+    background-color: white;
+    margin-top: 30px;
+
+    @extend %buttons-text;
+    color: black;
+
+    @include on-tablet {
+      width: 260px;
+      height: 60px;
+      margin-top: 10px;
+    }
+
+    &:hover {
+      background-color: var(--color-white-translucent);
+    }
+  }
+}
+
+.title {
+  @extend %uppercase;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  width: 50%;
+
+  @include on-tablet {
+    font-size: 20px;
+    line-height: 25px;
+    width: 70%;
+  }
+
+  @include on-mobile {
+    font-size: 20px;
+    line-height: 25px;
+    width: 90%;
+  }
+}
+
+.text {
+  @extend %body-text;
+  font-family: var(--font-paragraph-medium);
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+
+  @include on-tablet {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

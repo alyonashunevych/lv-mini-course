@@ -1,0 +1,126 @@
+@use './../../styles/global' as *;
+@use './../../styles/mixins' as *;
+
+.main {
+  position: relative;
+  @extend %grid;
+  row-gap: 30px;
+
+  button {
+    border: none;
+    width: 280px;
+    height: 80px;
+    margin-top: 43px;
+    background-color: var(--color-burgundy);
+
+    @extend %buttons-text;
+
+    @include on-tablet {
+      width: 260px;
+      height: 60px;
+      margin-top: 50px;
+    }
+
+    @include on-mobile {
+      margin-top: 30px;
+    }
+
+    &:hover {
+      background-color: var(--color-burgundy-translucent);
+    }
+  }
+
+  & nav {
+    @include on-mobile {
+      display: none;
+    }
+  }
+}
+
+.text_box,
+.photo_box {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/6;
+
+  @include on-mobile {
+    align-items: center;
+  }
+}
+
+.photo_box {
+  grid-column: 7/-1;
+  gap: 35px;
+  justify-self: end;
+
+  @include on-tablet {
+    grid-column: 6/-1;
+    max-width: 400px;
+  }
+}
+
+.logo {
+  height: 47px;
+  width: fit-content;
+}
+
+.paragraph,
+.price {
+  @extend %body-text;
+
+  font-size: 22px;
+  line-height: 33px;
+  width: 97%;
+
+  @include on-tablet {
+    font-size: 2vw;
+    line-height: 3.5vw;
+  }
+
+  @include on-mobile {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.price {
+  font-family: var(--font-paragraph-medium);
+  width: 100%;
+  margin-top: 30px;
+}
+
+.lv_background {
+  position: absolute;
+  user-select: none;
+  z-index: -1;
+  width: 410px;
+  top: 280px;
+  right: 100px;
+
+  @include on-tablet {
+    width: 40vw;
+    top: 230px;
+    right: -50px;
+  }
+
+  @include on-mobile {
+    display: none;
+  }
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: max-content;
+  @extend %body-text;
+
+  &_arrow {
+    width: 20px;
+  }
+
+  @include on-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+@use './../../styles/global' as *;
+@use './../../styles/mixins' as *;
+
+.block7 {
+  @extend %grid;
+  grid-auto-flow: column;
+  row-gap: 55px;
+
+  @include on-tablet {
+    row-gap: 40px;
+  }
+
+  @include on-mobile {
+    row-gap: 30px;
+    padding: 0;
+  }
+}
+
+.items_box {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include on-tablet {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+
+  @include on-tablet {
+    gap: 20px;
+  }
+}
+
+.text {
+  @extend %body-text;
+  font-family: var(--font-paragraph-medium);
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  width: 70%;
+
+  @include on-tablet {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.icon {
+  height: 115px;
+
+  @include on-mobile {
+    height: 80px;
+  }
+}
+
+.title {
+  @include on-tablet {
+    text-align: center;
+  }
+}
