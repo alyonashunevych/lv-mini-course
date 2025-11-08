@@ -12,7 +12,7 @@ export const Block8 = () => {
         Це може стати твоєю точкою професійної опори
       </p>
 
-      <a>
+      <a href="https://lilaskandanatkh.sendpulse.online/mini-course">
         <button>Придбати</button>
       </a>
     </section>
