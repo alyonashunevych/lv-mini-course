@@ -29,7 +29,7 @@ export const Main: React.FC<Props> = ({ onOpen }) => {
         </p>
         <p className={styles.price}>
           <p className={styles.price_discount}>599 грн</p>
-          Вартість: <span>1200 грн</span> | Доступ одразу після оплати
+          Вартість: <span>1200 грн</span> | Тільки до кінця місяця
         </p>
 
         <a href="#prices">
