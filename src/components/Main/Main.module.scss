@@ -86,8 +86,20 @@
 
 .price {
   font-family: var(--font-paragraph-medium);
-  width: 100%;
+  width: 102%;
   margin-top: 30px;
+  position: relative;
+
+  & span {
+    text-decoration: line-through;
+  }
+
+  &_discount {
+    position: absolute;
+    bottom: 23px;
+    left: 91px;
+    margin: 0;
+  }
 }
 
 .lv_background {
